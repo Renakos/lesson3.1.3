@@ -12,7 +12,6 @@ interface Verifiable {
 }
 
 fun User.verify(otherUser: User) {
-    // Шаг 3: Провести проверку
     if (this == otherUser) {
         println("Вход выполнен успешно!")
     } else {
@@ -35,7 +34,6 @@ fun main() {
     val enteredUser = User(enteredUsername, enteredEmail, enteredAge, enteredPassword)
 
     try {
-        // Шаг 7: Вызвать функцию verify
         enteredUser.verify(defaultUser)
     } catch (e: IllegalArgumentException) {
         println(e.message)
