@@ -3,8 +3,8 @@ data class User(
     val email: String,
     val age: Int,
     val password: String
-) {
-    fun verify(user: User) {
+): Verifiable {
+    override fun verify(user: User) {
         if (this == user) {
             println("Вход выполнен успешно!")
         } else {
